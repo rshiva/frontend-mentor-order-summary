@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+:root{
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  --neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg) ;
+  background-repeat: no-repeat;
+  background-color: var(--primary-pale-blue);
+}
+
+.card{
+  display: flex;
+  flex-direction:column;
+  border-radius: 1.25rem;
+  background-color: white;
+  width: 375px;
+  align-items: center;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.card-image{
+  border-radius: 6px;
+}
+.order-summary{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* border: 1px solid; */
+  width: 300px;
+  color: gray;
+}
+
+.order-summary h1{
+  padding-top: 1.5rem;
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+
+.subscription-details{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--neutral-very-pale-blue);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  align-self: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+}
+.subscription-details a{
+  margin-left: 4rem;
+  color: var(--primary-bright-blue);
+  font-size: 0.875rem;
+}
+.subscription-details b{
+  color: black;
+  font-weight: 600;
+}
+.annnul-plan{
+  margin-left: 1rem;
+}
+.summary-description{
+  text-align: center;
+}
+.payment{
+  width: 100%;
+  background-color: var(--primary-bright-blue);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 19px 2px 1px hsla(224, 57%, 81%, 0.2);
+  border: 0;
+  margin-top: 1rem;
+}
+.cancel-payment{
+  border: 0;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 375px){
+  .card{
+    width: 320px;
+    
+  }
+  .order-summary{
+    /* width: 300px; */
+    /* padding: 0rem 1rem; */
+  }
+  
+}
